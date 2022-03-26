@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f47d1d8c26.js" crossorigin="anonymous"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <script defer src="countries.js"></script>
+    <script defer src="script.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet"/>
+    <link href="main.css" rel="stylesheet">
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="map" style="width:100vw;height:110vh;">
+    <div class="position-buttons" id="position-buttons"></div>
+    <div class="country" id="news-page" onclick="leavePage()" hidden>
+      <div class="report-container" id="report-container">
+        <div class="report-header">
+          <div class="textual-title">
+            <h1 class="report-title" id="country-title"></h1>
+            <h4 class="report-subtitle" id="country-subtitle"></h4>
+          </div>
+          <img alt="report-flag" class="report-flag" id="country-flag">
+        </div>
+        <ul class="bullet-points" id="bullet-points"></ul>
+      </div>
+    </div>
+  </body>
+</html>

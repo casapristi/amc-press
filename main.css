@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@font-face{
+  font-family:"Chomsky";
+  src:url(fonts/Chomsky.otf) format("truetype");
+}
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  overflow:hidden;
+}
+.mapboxgl-popup{
+  font:12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.position-buttons{
+  background:#fff;
+  padding:5px;
+  position:fixed;
+  left:10px;
+  top:10px;
+  border-radius:5px;
+  display:flex;
+  flex-direction:column;
+  z-index:999;
+}
+.fly-button{
+  font-family:12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  border:none;
+  color:#333;
+  font-weight:700;
+  cursor:pointer;
+  padding:10px 20px;
+  background:transparent;
+  border-bottom:1px solid #3338;
+  justify-content:space-between;
+  align-items:center;
+  display:flex;
+  gap:20px;
+}
+.fly-button:last-child{
+  border-bottom:none;
+}
+@keyframes fade-in{
+  from{
+    opacity:0;
+    pointer-events:none;
+    visibility:hidden;
+  }
+  to{
+    opacity:1;
+    pointer-events:all;
+    visibility:visible;
+  }
+}
+@keyframes fade-out{
+  from{
+    opacity:1;
+    pointer-events:all;
+    visibility:visible;
+  }
+  to{
+    opacity:0;
+    pointer-events:none;
+    visibility:hidden;
+  }
+}
+.country{
+  position:fixed;
+  background:#0005;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:999;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  animation:.5s ease-in-out fade-in;
+}
+.country[hidden]{
+  opacity:0;
+  pointer-events:none;
+  visibility:hidden;
+  animation:.5s ease-in-out fade-out;
+}
+.report-container{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  height:calc(90% - 30px * 2);
+  width:calc(700px - 30px * 2);
+  background-image:url(images/paper.jpg);
+  padding:30px;
+}
+.report-container::before{
+  content:"";
+  position:absolute;
+  top:22px;
+  bottom:22px;
+  left:22px;
+  right:22px;
+  border:3px solid #333;
+}
+.report-container::after{
+  content:"";
+  position:absolute;
+  top:10px;
+  bottom:10px;
+  left:10px;
+  right:10px;
+  border:10px solid #333;
+}
+.page-button{
+  background:transparent;
+  font-size:40px;
+  color:#cecece;
+  border:none;
+  cursor:pointer;
+}
+.page-button[hidden]{
+  opacity:0;
+  cursor:default;
+}
+.report-title{
+  font-family:"Chomsky";
+  font-size:80px;
+  margin-top:30px;
+  padding-bottom:23px;
+  border-bottom:3px solid #333;
+}
+.report-subtitle{
+  opacity:.8;
+  font-family:"Chomsky";
+  font-size:50px;
+  margin-top:15px;
+}
+.report-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  height:fit-content;
+  margin-bottom:20px;
+}
+.report-flag{
+  width:200px;
+  border-radius:5px;
+  margin:10px;
+}
+.textual-title{
+  height:100%;
+}
+.bullet-points{
+  z-index:999;
+  padding:30px;
+  height:100%;
+  overflow-y:auto;
+}
+.bullet-points .list-item{
+  font-family:"Nanum Myeongjo";
+  font-size:18px;
+  list-style:square;
+}
+.list-item.list-in-list-item{
+  list-style:disc;
+  margin-left:20px;
+}
