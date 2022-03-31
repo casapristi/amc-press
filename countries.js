@@ -32,7 +32,7 @@ const countries=[
     GPS:[-26.497616,31.355667]
   },
   {
-    name:"⛩China⛩",
+    name:"China",
     subtitle:null,
     flag:"images/flags/zs06jmu.png",
     values:[
